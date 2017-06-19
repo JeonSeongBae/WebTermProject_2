@@ -147,7 +147,7 @@
 					alert("중복체크를 해주세요.");
 				} else {
 					createMember();
-					location.href = 'http://localhost:8080/TP2_201302476/loginPage.jsp';
+					location.href = 'http://localhost:8080/TP2_201302476/login.jsp';
 				}
 			}
 		})
