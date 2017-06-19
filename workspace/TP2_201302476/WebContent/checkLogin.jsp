@@ -16,7 +16,7 @@
 		String fileName = request.getParameter("ID") + ".txt";
 		String Password = request.getParameter("Password");
 		try {
-			String filePath = application.getRealPath("WEB-INF/IDDataBase_certification/")+"\\"; // 불러올 위치
+			String filePath = "C:\\WP\\"; // 불러올 위치
 			File file = new File(filePath);
 			File[] files = file.listFiles();
 			FileReader fileReader = new FileReader(filePath + fileName); //파일읽기객체생성

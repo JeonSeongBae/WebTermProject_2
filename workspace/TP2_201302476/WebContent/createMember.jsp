@@ -14,19 +14,15 @@
 		String answer = ""; // 초기화
 		try {
 			// 파일 쓰기
-			String filePath = application.getRealPath("WEB-INF/IDDataBase/") + "\\"; // 저장될 위치
+			String filePath = "C:\\"; // 저장될 위치
 			String fileName = request.getParameter("ID") + ".txt"; //ID값을 불러옴
 			FileWriter fileWriter = new FileWriter(filePath + fileName);
 			String Password = request.getParameter("Password"); // Password값을 불러옴
 			fileWriter.write(Password + "\n");
 			String Name = request.getParameter("Name"); // 이름 값을 불러옴
 			fileWriter.write(Name + "\n");
-			String Telephone = request.getParameter("Telephone"); // 핸드폰 번호값을 불러옴
-			fileWriter.write(Telephone + "\n");
 			String Email = request.getParameter("Email"); // Eamil값을 불러옴
 			fileWriter.write(Email + "\n");
-			String Birth = request.getParameter("Birth"); // 생일 값을 불러옴
-			fileWriter.write(Birth + "\n");
 			fileWriter.close();
 			answer = "SUCESS";
 		} catch (Exception e) {
