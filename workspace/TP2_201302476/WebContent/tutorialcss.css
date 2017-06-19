@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+/*TermProject_2*/
+/* 전체적인 튜토리얼 필드*/
+#Tutorial {
+	text-align: center;
+}
+/* 각각의 튜토리얼 테이블 */
+.tutorialTable {
+	float: left;
+}
+/* 손 패와 낸 카드의 장소에 대한 style */
+.Hand, .Field {
+	width: 100%;
+	height: 150px;
+}
+/* 손 패 style */
+.Hand {
+	background-color: gray;
+}
+/* 낸 카드 style */
+.Field {
+	background-color: orange;
+}
+/* 손 패와 낸 카드의 위치에 대한 style */
+.Hand tr td, .Field tr td {
+	text-align: center;
+	border: 1px solid black;
+	width: 130px;
+}
+/* 턴 종료버튼의 style */
+#terminateTurn {
+	width: 100px;
+	height: 50px;
+}
+/* 각각의 카드 */
+.playCard {
+	width: 128px;
+	height: 140px;
+}
+
+/* 덱 리스트 */
+.decklist {
+	
+}
+/* 직업캐릭터 */
+.character {
+	
+}
+/* 카드파괴 */
+.destroy {
+	
+}
+/* 공격력버프 */
+.adbuff {
+	
+}
+/* 방어력버프 */
+.sheildbuff {
+	
+}
+/*특수능력*/
+.skill {
+	
+}
