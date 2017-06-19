@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="assets/css/main.css" />
 <title>certification_인증완료</title>
 </head>
 <body>
-<form action="http://localhost:8080/TP_20132476/loginPage.jsp" method="get">
+<form action="http://localhost:8080/TP_20132476/login.jsp" method="get">
    <p>메일 인증이 성공하여<br>회원가입이 완료되었습니다.<br>로그인 후 이용하시길 바랍니다.</p>
    <input class="btn" type="submit" value="로그인 페이지 이동">
 </form>
