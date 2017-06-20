@@ -50,12 +50,11 @@
 		<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
-				class="label">Email</span></a></li>
+		<li><a href="https://www.gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 	</ul>
 	<ul class="copyright">
 		<li>School: <a href="http://plus.cnu.ac.kr/html/kr/">충남대학교</a></li>
-		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering	</li>
+		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/">Computer	Science Enginnering</a></li>
 	</ul>
 	</footer>
 </body>

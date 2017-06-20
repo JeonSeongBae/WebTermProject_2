@@ -26,68 +26,66 @@
 
 	<!-- Intro -->
 	<section id="intro" class="main style1 dark fullscreen">
-	<div class="content">
-		<header>
-		<h2>HearthStone</h2>
-		</header>
-		<p>
-			빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
-		<h4>
-			<strong>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.
-			</strong>
-		</h4>
-		<br> <input type="button" value="게임 플레이"><br> PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능
-		</p>
-		<footer> <a href="#one" class="button style2 down">More</a> </footer>
-	</div>
+		<div class="content">
+			<header>
+			<h2>HearthStone</h2>
+			</header>
+			<p>빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
+				<h4>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.</h4><br>
+				<input type="button" value="게임 플레이"><br><br> PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능<br></p>
+			<footer><a href="#one" class="button style2 down">More</a> </footer>
+		</div>
 	</section>
 
 	<!-- one -->
 	<section id="one" class="main style2 right dark fullscreen">
-	<div class="content box style2">
-		<img id="hero1" class="hero" alt="" src="./img/hero1.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero2" class="hero" alt="" src="./img/hero2.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero2.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero3" class="hero" alt="" src="./img/hero3.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero3.jsp'" />
-	</div>
+		<div class="content box style2">
+			<img id="hero1" class="hero" alt="" src="./img/hero1.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero2" class="hero" alt="" src="./img/hero2.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero2.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero3" class="hero" alt="" src="./img/hero3.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero3.jsp'" />
+		</div>
+		<a href="#two" class="button style2 down anchored">Next</a>
 	</section>
 
 	<!-- two -->
 	<section id="two" class="main style2 left dark fullscreen">
-	<div class="content box style2">
-		<img id="hero4" class="hero" alt="" src="./img/hero4.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero4.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero5" class="hero" alt="" src="./img/hero5.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero5.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero6" class="hero" alt="" src="./img/hero6.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero6.jsp'" />
-	</div>
+		<div class="content box style2">
+			<img id="hero4" class="hero" alt="" src="./img/hero4.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero4.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero5" class="hero" alt="" src="./img/hero5.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero5.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero6" class="hero" alt="" src="./img/hero6.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero6.jsp'" />
+		</div>
+		<a href="#three" class="button style2 down anchored">Next</a>
 	</section>
 
 	<!-- three -->
 	<section id="three" class="main style2 right dark fullscreen">
-	<div class="content box style2">
-		<img id="hero7" class="hero" alt="" src="./img/hero7.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero7.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero8" class="hero" alt="" src="./img/hero8.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero8.jsp'" />
-	</div>
-	<div class="content box style2">
-		<img id="hero9" class="hero" alt="" src="./img/hero9.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero9.jsp'" />
-	</div>
+		<div class="content box style2">
+			<img id="hero7" class="hero" alt="" src="./img/hero7.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero7.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero8" class="hero" alt="" src="./img/hero8.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero8.jsp'" />
+		</div>
+		<div class="content box style2">
+			<img id="hero9" class="hero" alt="" src="./img/hero9.jpg"
+				onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero9.jsp'" />
+		</div>
+		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
 
 	<!-- Work -->
@@ -190,8 +188,7 @@
 			<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
-				class="label">Email</span></a></li>
+		<li><a href="https://www.gmail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 		<li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 		<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 		<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
@@ -201,7 +198,7 @@
 	<!-- Menu -->
 	<ul class="menu">
 		<li>School: <a href="http://plus.cnu.ac.kr/html/kr/">충남대학교</a></li>
-		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering	</li>
+		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/">Computer	Science Enginnering</a></li>
 	</ul>
 
 	</footer>
