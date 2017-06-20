@@ -19,15 +19,8 @@
 	<div id="main">
 		<!-- Header -->
 		<header id="header">
-		<h1>발리라<br>생귀나르</h1>
-		<p>단검의 대가<br>: 1/2 단검을 장착합니다.</p>
-		<ul class="icons">
-		<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
-				class="label">Email</span></a></li>
-		</ul>
+			<h1>발리라<br>생귀나르</h1>
+			<p>단검의 대가<br>: 1/2 단검을 장착합니다.</p>
 		</header>
 
 		<!-- Thumbnail -->

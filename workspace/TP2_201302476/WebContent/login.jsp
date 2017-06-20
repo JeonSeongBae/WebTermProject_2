@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-
 	<!-- Header -->
 	<header id="header">
 	<h1>·Î±×ÀÎ</h1>
@@ -42,7 +41,6 @@
 			</tr>
 		</tfoot>
 	</table>
-
 
 	<!-- Footer -->
 	<footer id="footer">

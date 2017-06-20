@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="assets/css/submain.css" />
 </head>
 <body>
+	<%
+		String ID = request.getParameter("ID");	
+	%>
 	<!-- Header -->
 	<header id="header">
 	<h1>SeongBaeJeon</h1>
@@ -90,38 +93,53 @@
 
 	<!-- Work -->
 	<section id="work" class="main style3 primary">
-	<div class="content">
-		<header>
-		<h2>My Work</h2>
-		<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas
-			dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci
-			rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in.
-			Curabitur egestas consectetur magna vitae.</p>
-		</header>
-
-		<!-- Gallery  -->
-		<div class="gallery">
-			<article class="from-left"> <a href="images/fulls/01.jpg"
-				class="image fit"><img src="images/thumbs/01.jpg"
-				title="The Anonymous Red" alt="" /></a> </article>
-			<article class="from-right"> <a href="images/fulls/02.jpg"
-				class="image fit"><img src="images/thumbs/02.jpg"
-				title="Airchitecture II" alt="" /></a> </article>
-			<article class="from-left"> <a href="images/fulls/03.jpg"
-				class="image fit"><img src="images/thumbs/03.jpg"
-				title="Air Lounge" alt="" /></a> </article>
-			<article class="from-right"> <a href="images/fulls/04.jpg"
-				class="image fit"><img src="images/thumbs/04.jpg"
-				title="Carry on" alt="" /></a> </article>
-			<article class="from-left"> <a href="images/fulls/05.jpg"
-				class="image fit"><img src="images/thumbs/05.jpg"
-				title="The sparkling shell" alt="" /></a> </article>
-			<article class="from-right"> <a href="images/fulls/06.jpg"
-				class="image fit"><img src="images/thumbs/06.jpg"
-				title="Bent IX" alt="" /></a> </article>
+		<div class="content">
+			<header>
+			<h2>My Work</h2>
+			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas
+				dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci
+				rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in.
+				Curabitur egestas consectetur magna vitae.</p>
+			</header>
+			<!-- Gallery  -->
+			<div class="gallery">
+				<article class="from-left">
+					<a href="images/fulls/01.jpg" class="image fit">
+						<img src="images/thumbs/01.jpg"	title="The Anonymous Red" alt="" />
+					</a>
+				</article>
+				
+				<article class="from-right">
+					<a href="images/fulls/02.jpg" class="image fit">
+						<img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" />
+					</a>
+				</article>
+				
+				<article class="from-left">
+					<a href="images/fulls/03.jpg" class="image fit">
+						<img src="images/thumbs/03.jpg"	title="Air Lounge" alt="" />
+					</a>
+				</article>
+				
+				<article class="from-right">
+					<a href="images/fulls/04.jpg" class="image fit">
+						<img src="images/thumbs/04.jpg"	title="Carry on" alt="" />
+					</a>
+				</article>
+				
+				<article class="from-left">
+					 <a href="images/fulls/05.jpg" class="image fit">
+						<img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" />
+					</a>
+				</article>
+				
+				<article class="from-right">
+					<a href="images/fulls/06.jpg" class="image fit">
+						<img src="images/thumbs/06.jpg"	title="Bent IX" alt="" />
+					</a> 
+				</article>
+			</div>
 		</div>
-
-	</div>
 	</section>
 	<!-- Contact -->
 	<section id="contact" class="main style3 secondary">
@@ -136,9 +154,16 @@
 			<div>
 			<table>
 				<tr>
-					<td><input id="nickname" type="text" name="name" placeholder="NickName" /></td>
-					<td><input id="battletag" type="text" name="name" placeholder="BattleTag" /></td>
-					<td><input id="battlenetemail" type="email" name="email" placeholder="battleNetEmail" /></td>
+					<td><input id="id" type="text" value="<%=ID %>" disabled/></td>
+					<td><input id="nickname" type="text" placeholder="NickName" /></td>
+					<td><input id="battletag" type="text" placeholder="BattleTag" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input id="battlenetemail" type="email" placeholder="battleNetEmail" /></td>
+					<td><select>
+						<option value="">---직접입력---</option>
+						<option value="@gmail.com">@gamil.com</option>
+					</select></td>
 				</tr>
 			</table>
 			<table>
@@ -171,7 +196,6 @@
 						<input id="racontact9" class="radiobtn" type="radio" name="selecthero"></td>
 					</tr>		
 				</table>
-				
 				<div class="field">
 					<textarea id="Msg" name="message" placeholder="Message" rows="6"></textarea>
 				</div>
@@ -232,6 +256,7 @@
 							Battletag : document.getElementById("battletag").value,
 							Email : document.getElementById("battlenetemail").value,
 							Msg : document.getElementById("Msg").value,
+							Id : document.getElementById("id").value,
 							Hero : radioindex,
 							Password : password
 						},

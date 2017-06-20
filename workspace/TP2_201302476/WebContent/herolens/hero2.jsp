@@ -19,15 +19,8 @@
 	<div id="main">
 		<!-- Header -->
 		<header id="header">
-		<h1>렉사르</h1>
-		<p>고정 사격<br>: 적 영웅에게 피해를 2 줍니다.</p>
-		<ul class="icons">
-		<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
-				class="label">Email</span></a></li>
-		</ul>
+			<h1>렉사르</h1>
+			<p>고정 사격<br>: 적 영웅에게 피해를 2 줍니다.</p>
 		</header>
 
 		<!-- Thumbnail -->

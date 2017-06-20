@@ -24,32 +24,34 @@
 		String Email = request.getParameter("Email").toString();
 		String Hero = request.getParameter("Hero").toString();
 		String Msg = request.getParameter("Msg").toString();
+		String ID = request.getParameter("Id").toString();
 		System.out.println(Hero);
 
 		String sbj = "인증을 진행해주세요.";
 		String src = request.getParameter("Password").toString();; // 보내는사람 email주소
-		if (Hero.equals("1")){
+		if (Hero.equals("0")){
 			Hero = "굴단";
-		}else if (Hero.equals("2")){
+		}else if (Hero.equals("1")){
 			Hero = "렉사르";
-		}else if (Hero.equals("3")){
+		}else if (Hero.equals("2")){
 			Hero = "말퓨리온";
-		}else if (Hero.equals("4")){
+		}else if (Hero.equals("3")){
 			Hero = "발리라";
-		}else if (Hero.equals("5")){
+		}else if (Hero.equals("4")){
 			Hero = "스랄";
-		}else if (Hero.equals("6")){
+		}else if (Hero.equals("5")){
 			Hero = "안두인";
-		}else if (Hero.equals("7")){
+		}else if (Hero.equals("6")){
 			Hero = "우서";
-		}else if (Hero.equals("8")){
+		}else if (Hero.equals("7")){
 			Hero = "제이나";
-		}else if (Hero.equals("9")){
+		}else if (Hero.equals("8")){
 			Hero = "헬스크림";
-		}
+		}else
+			Hero = "모든 캐릭터";
 		String msg = "<div><p>" + Nickname + Battletag + " 플레이어가 요청하였습니다.</p><br>";
-		msg += "<div><p>" + Hero + " 케릭터로 요청하였습니다.</p><br>";
-		msg += "<div><p>" + Msg + "</p><br>";
+		msg += "<div><p>" + Hero + " 캐릭터로 요청하였습니다.</p><br>";
+		msg += "<div><p>" + ID + " : " + Msg + "</p><br>";
 				
 		Properties pro = new Properties();
 		pro.put("mail.smtp.user", Email);

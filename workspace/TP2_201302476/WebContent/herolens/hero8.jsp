@@ -19,15 +19,8 @@
 	<div id="main">
 		<!-- Header -->
 		<header id="header">
-		<h1>제이나<br>프라우드무어</h1>
-		<p>화염 작렬<br>: 피해를 1 줍니다.</p>
-		<ul class="icons">
-		<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
-				class="label">Email</span></a></li>
-		</ul>
+			<h1>제이나<br>프라우드무어</h1>
+			<p>화염 작렬<br>: 피해를 1 줍니다.</p>
 		</header>
 
 		<!-- Thumbnail -->
