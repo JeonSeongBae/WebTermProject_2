@@ -55,9 +55,7 @@
 	</ul>
 	<ul class="copyright">
 		<li>School: <a href="http://plus.cnu.ac.kr/html/kr/">충남대학교</a></li>
-		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering
-		</li>
-
+		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering	</li>
 	</ul>
 	</footer>
 </body>

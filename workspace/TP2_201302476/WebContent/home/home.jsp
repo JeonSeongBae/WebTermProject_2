@@ -135,7 +135,7 @@
 		</header>
 		<div class="box">
 		
-			<form method="post" action="">
+			<div>
 			<table>
 				<tr>
 					<td><input id="nickname" type="text" name="name" placeholder="NickName" /></td>
@@ -175,13 +175,12 @@
 				</table>
 				
 				<div class="field">
-					<textarea name="message" placeholder="Message" rows="6"></textarea>
+					<textarea id="Msg" name="message" placeholder="Message" rows="6"></textarea>
 				</div>
 				<ul class="actions">
-					<li><input type="submit" value="Send Message" /></li>
+					<li><input type="button" value="Send Message" onclick="send_email()"/></li>
 				</ul>
-			</form>
-		
+			</div>
 		</div>
 	</div>
 	</section>
@@ -201,8 +200,8 @@
 
 	<!-- Menu -->
 	<ul class="menu">
-		<li>&copy; Untitled</li>
-		<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+		<li>School: <a href="http://plus.cnu.ac.kr/html/kr/">충남대학교</a></li>
+		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering	</li>
 	</ul>
 
 	</footer>
@@ -218,6 +217,31 @@
 			<script type="text/javascript">
 				function clickradio(id){
 					document.getElementById("ra"+id.id).checked = true;
+				}
+				function send_email() {
+				    var radio = document.getElementsByClassName("radiobtn");
+				    var radioindex;
+				    for (radioindex = 0; radioindex < radio.length; radioindex++) {
+				      if (radio[radioindex].checked == true) {
+				        break;
+				      }
+				    }
+				    var password = prompt("이메일 패스워드를 입력해주세요.");
+					$.ajax({
+						type : 'post',
+						url : 'http://localhost:8080/TP2_201302476/home/email.jsp',
+						data : {
+							Nickname : document.getElementById("nickname").value,
+							Battletag : document.getElementById("battletag").value,
+							Email : document.getElementById("battlenetemail").value,
+							Msg : document.getElementById("Msg").value,
+							Hero : radioindex,
+							Password : password
+						},
+						success : function(response) {
+							alert("메일을 성공적으로 보냈습니다. 답장을 기다려주세요.");
+						}
+					})
 				}
 			</script>
 </html>
