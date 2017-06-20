@@ -20,17 +20,17 @@
 			<table class="Hand" id="yourHand">
 				<tr>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						id="terminateTurn" src="./img/cardlist/card1.JPG"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="돌주먹오우거" src="./img/cardlist/card2.JPG"
+						class="playCard" id="yourcard1" src="./img/cardlist/card1.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="멀록약탈꾼" src="./img/cardlist/card3.JPG"
+						class="playCard" id="yourcard2" src="./img/cardlist/card2.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="민물악어" src="./img/cardlist/card4.JPG"
+						class="playCard" id="yourcard3" src="./img/cardlist/card3.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
-
+					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
+						class="playCard" id="yourcard4" src="./img/cardlist/card4.JPG"
+						draggable="true" ondragstart="drag(event)"></td>
 				</tr>
 			</table>
 		</div>
@@ -38,11 +38,11 @@
 		<div class="tutorialTable">
 			<table class="Field" id="yourField">
 				<tr>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="yourdrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="yourdrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="yourdrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="yourdrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="yourdrop(event)" ondragover="allowDrop(event)"></td>
 				</tr>
 			</table>
 		</div>
@@ -56,11 +56,11 @@
 		<div class="tutorialTable">
 			<table class="Field" id="myField">
 				<tr>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="mydrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="mydrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="mydrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="mydrop(event)" ondragover="allowDrop(event)"></td>
+					<td ondrop="mydrop(event)" ondragover="allowDrop(event)"></td>
 				</tr>
 			</table>
 		</div>
@@ -69,15 +69,16 @@
 			<table class="Hand" id="myHand">
 				<tr>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						id="terminateTurn" src="./img/cardlist/card5.JPG"></td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="돌주먹오우거" src="./img/cardlist/card6.JPG"
+						class="playCard" id="mycard1" src="./img/cardlist/card5.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="멀록약탈꾼" src="./img/cardlist/card7.JPG"
+						class="playCard" id="mycard2" src="./img/cardlist/card6.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
-						class="playCard" id="민물악어" src="./img/cardlist/card8.JPG"
+						class="playCard" id="mycard3" src="./img/cardlist/card7.JPG"
+						draggable="true" ondragstart="drag(event)"></td>
+					<td ondrop="drop(event)" ondragover="allowDrop(event)"><img
+						class="playCard" id="mycard4" src="./img/cardlist/card8.JPG"
 						draggable="true" ondragstart="drag(event)"></td>
 				</tr>
 			</table>
@@ -100,11 +101,29 @@
 		ev.dataTransfer.setData("text", ev.target.id);
 	}
 	// 카드를 Drop할 때 해당 table의 chile로 만들어줌
-	function drop(ev) {
+	function yourdrop(ev) {
 		ev.preventDefault();
 		var data = ev.dataTransfer.getData("text");
-		ev.target.appendChild(document.getElementById(data));
+		if(data.split("c").equals("my")){
+			
+		}else{
+			ev.target.appendChild(document.getElementById(data));
+			}
+		}
 	}
+	// 카드를 Drop할 때 해당 table의 chile로 만들어줌
+	function mydrop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		if(data.split("c").equals("your")){
+			var temp = document.getElementById(data);
+			var temphtml = temp.innerHTML;
+			temp.innerHTML = Number(temp.innerHTML)-1;
+			alert("temp: "+temp+"Html"+temp.innerHTML);
+		}else{
+			ev.target.appendChild(document.getElementById(data));
+			}
+		}
 	// 카드를 삭제 해주는 메소드
 	function deleteImg(ev) {
 		ev.preventDefault();
