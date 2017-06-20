@@ -47,22 +47,22 @@
 	<!-- Footer -->
 	<footer id="footer">
 	<ul class="icons">
-		<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-		<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="#" class="icon fa-envelope-o"><span
+		<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
 				class="label">Email</span></a></li>
 	</ul>
 	<ul class="copyright">
 		<li>School: <a href="http://plus.cnu.ac.kr/html/kr/">충남대학교</a></li>
-		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer
-			Science Enginnering
+		<li>&copy; Major: <a href="http://computer.cnu.ac.kr/"></a>Computer	Science Enginnering
 		</li>
 
 	</ul>
 	</footer>
 </body>
-
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript">
 	function login() {
 		$.ajax({
@@ -74,7 +74,7 @@
 			},
 			success : function(response) {
 				if (response == "MATCH") {
-					onePageEnter();
+					enterPage();
 				} else if (response == "NOMATCH") {
 					alert("비밀번호가 일치하지 않습니다.");
 				} else if (response == "NOTEXIST") {
@@ -84,8 +84,8 @@
 		})
 	}
 	// OnePage를 열어줌
-	function onePageEnter() {
-		location.href = 'OnePageDir\\OnePage.html';
+	function enterPage() {
+		location.href = 'main\\main.html';
 	}
 
 (function() {

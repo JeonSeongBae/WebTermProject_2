@@ -40,8 +40,8 @@
 				Session mailSession = Session.getInstance(pro, new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 						String GmailID = "";
-						String GmailPassword = "";
-						return new PasswordAuthentication(GmailID, GmailPassword); // gmail 메일 ID / PWD 
+						String GmailPW = "";
+						return new PasswordAuthentication(GmailID, GmailPW); // gmail 메일 ID / PWD 
 					}
 				});
 				mailSession.setDebug(true); // Create a default MimeMessage object.
