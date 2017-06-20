@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/submain.css" />
 </head>
 <body>
 	<!-- Header -->
@@ -32,10 +33,14 @@
 		<header>
 		<h2>HearthStone</h2>
 		</header>
-		<p>빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
-		<h4><strong>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.</strong></h4><br>
-		<input type="button" value="게임 플레이"><br>
-		PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능
+		<p>
+			빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
+		<h4>
+			<strong>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.
+			</strong>
+		</h4>
+		<br> <input type="button" value="게임 플레이"><br> PC,
+		Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능
 		</p>
 		<footer> <a href="#one" class="button style2 down">More</a> </footer>
 	</div>
@@ -66,33 +71,55 @@
 			Curabitur egestas consectetur magna.</p>
 	</div>
 	<a href="#three" class="button style2 down anchored">Next</a> </section>
-	
-	
-		<!-- three -->
+	</section>
+
+	<!-- three -->
 	<section id="three" class="main style2 right dark fullscreen">
 	<div class="content box style2">
-		<img class="hero" alt="" src="./img/hero1.jpg"/>
-		<img class="hero" alt="" src="./img/hero2.jpg"/>
-		<img class="hero" alt="" src="./img/hero3.jpg"/>
+		<img id="hero1" class="hero" alt="" src="./img/hero1.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
 	</div>
-	<a href="#four" class="button style2 down anchored">Next</a> </section>
+	<div class="content box style2">
+		<img id="hero2" class="hero" alt="" src="./img/hero2.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	<div class="content box style2">
+		<img id="hero3" class="hero" alt="" src="./img/hero3.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	</section>
 
 	<!-- four -->
 	<section id="four" class="main style2 left dark fullscreen">
 	<div class="content box style2">
-		<img class="hero" alt="" src="./img/hero4.jpg"/>
-		<img class="hero" alt="" src="./img/hero5.jpg"/>
-		<img class="hero" alt="" src="./img/hero6.jpg"/>
-	<a href="five" class="button style2 down anchored">Next</a> </section>
-	
-		<!-- five -->
-	<section id="five" class="main style2 right dark fullscreen">
+		<img id="hero4" class="hero" alt="" src="./img/hero4.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
 	<div class="content box style2">
-		<img class="hero" alt="" src="./img/hero7.jpg"/>
-		<img class="hero" alt="" src="./img/hero8.jpg"/>
-		<img class="hero" alt="" src="./img/hero9.jpg"/>
-	<a href="#work" class="button style2 down anchored">Next</a> </section>
-	
+		<img id="hero5" class="hero" alt="" src="./img/hero5.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	<div class="content box style2">
+		<img id="hero6" class="hero" alt="" src="./img/hero6.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	</section>
+
+	<!-- five -->
+	<section id="four" class="main style2 right dark fullscreen">
+	<div class="content box style2">
+		<img id="hero7" class="hero" alt="" src="./img/hero7.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	<div class="content box style2">
+		<img id="hero8" class="hero" alt="" src="./img/hero8.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	<div class="content box style2">
+		<img id="hero9" class="hero" alt="" src="./img/hero9.jpg"
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+	</div>
+	</section>
 
 	<!-- Work -->
 	<section id="work" class="main style3 primary">
@@ -129,7 +156,6 @@
 
 	</div>
 	</section>
-
 	<!-- Contact -->
 	<section id="contact" class="main style3 secondary">
 	<div class="content">
@@ -156,7 +182,6 @@
 		</div>
 	</div>
 	</section>
-
 	<!-- Footer -->
 	<footer id="footer"> <!-- Icons -->
 	<ul class="actions">
@@ -175,7 +200,6 @@
 	</ul>
 
 	</footer>
-
 </body>
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
