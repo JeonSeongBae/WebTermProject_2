@@ -83,9 +83,8 @@
 			}
 		})
 	}
-	// OnePage∏¶ ø≠æÓ¡‹
 	function enterPage() {
-		location.href = 'main\\main.html';
+		location.href = "http://localhost:8080/TP2_201302476/home/home.jsp?ID="+document.getElementById("ID").value;
 	}
 
 (function() {

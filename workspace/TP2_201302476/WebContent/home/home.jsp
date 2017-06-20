@@ -20,8 +20,6 @@
 		<li><a href="#one">one</a></li>
 		<li><a href="#two">two</a></li>
 		<li><a href="#three">three</a></li>
-		<li><a href="#four">four</a></li>
-		<li><a href="#five">five</a></li>
 		<li><a href="#work">work</a></li>
 		<li><a href="#contact">Contact</a></li>
 	</ul>
@@ -39,85 +37,57 @@
 			<strong>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.
 			</strong>
 		</h4>
-		<br> <input type="button" value="게임 플레이"><br> PC,
-		Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능
+		<br> <input type="button" value="게임 플레이"><br> PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능
 		</p>
 		<footer> <a href="#one" class="button style2 down">More</a> </footer>
 	</div>
 	</section>
 
-	<!-- One -->
+	<!-- one -->
 	<section id="one" class="main style2 right dark fullscreen">
-	<div class="content box style2">
-		<header>
-		<h2>What I Do</h2>
-		</header>
-		<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas
-			dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci
-			rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in.
-			Curabitur egestas consectetur magna.</p>
-	</div>
-	<a href="#two" class="button style2 down anchored">Next</a> </section>
-
-	<!-- Two -->
-	<section id="two" class="main style2 left dark fullscreen">
-	<div class="content box style2">
-		<header>
-		<h2>Who I Am</h2>
-		</header>
-		<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas
-			dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci
-			rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in.
-			Curabitur egestas consectetur magna.</p>
-	</div>
-	<a href="#three" class="button style2 down anchored">Next</a> </section>
-	</section>
-
-	<!-- three -->
-	<section id="three" class="main style2 right dark fullscreen">
 	<div class="content box style2">
 		<img id="hero1" class="hero" alt="" src="./img/hero1.jpg"
 			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero2" class="hero" alt="" src="./img/hero2.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero2.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero3" class="hero" alt="" src="./img/hero3.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero3.jsp'" />
 	</div>
 	</section>
 
-	<!-- four -->
-	<section id="four" class="main style2 left dark fullscreen">
+	<!-- two -->
+	<section id="two" class="main style2 left dark fullscreen">
 	<div class="content box style2">
 		<img id="hero4" class="hero" alt="" src="./img/hero4.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero4.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero5" class="hero" alt="" src="./img/hero5.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero5.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero6" class="hero" alt="" src="./img/hero6.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero6.jsp'" />
 	</div>
 	</section>
 
-	<!-- five -->
-	<section id="four" class="main style2 right dark fullscreen">
+	<!-- three -->
+	<section id="three" class="main style2 right dark fullscreen">
 	<div class="content box style2">
 		<img id="hero7" class="hero" alt="" src="./img/hero7.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero7.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero8" class="hero" alt="" src="./img/hero8.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero8.jsp'" />
 	</div>
 	<div class="content box style2">
 		<img id="hero9" class="hero" alt="" src="./img/hero9.jpg"
-			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero1.jsp'" />
+			onclick="location.href='http://localhost:8080/TP2_201302476/herolens/hero9.jsp'" />
 	</div>
 	</section>
 

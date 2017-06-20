@@ -597,7 +597,6 @@
 /* Box */
 
 	.box {
-		background: #ffffff;
 		color: #39454b;
 		padding: 2em;
 	}
@@ -1825,7 +1824,7 @@
 			-webkit-justify-content: center;
 			-ms-justify-content: center;
 			justify-content: center;
-			padding: 3em 0 3em 0;
+/* 			padding: 3em 0 3em 0; */
 			overflow: hidden;
 		}
 
@@ -1954,9 +1953,9 @@
 					font-size: 3em;
 				}
 
-			.main.style2 {
-				padding: 6em 15px 6em 15px;
-			}
+/* 			.main.style2 { */
+/* 				padding: 6em 15px 6em 15px; */
+/* 			} */
 
 				.main.style2:before, .main.style2:after {
 					display: none !important;
@@ -2090,9 +2089,9 @@
 
 		}
 
-/* Intro */
+/* Intro, Three */
 
-	#intro {
+	#intro, #three {
 		background: url("images/overlay.png"), url("../../images/intro.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
@@ -2100,18 +2099,18 @@
 		background-repeat: repeat, no-repeat;
 	}
 
-/* One */
+/* One, Four */
 
-	#one {
+	#one, #four {
 		background: url("images/overlay.png"), url("../../images/one.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
 
-/* Two */
+/* Two, Five */
 
-	#two {
+	#two, #five {
 		background: url("images/overlay.png"), url("../../images/two.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
