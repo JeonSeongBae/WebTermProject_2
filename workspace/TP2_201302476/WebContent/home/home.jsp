@@ -135,25 +135,42 @@
 		</header>
 		<div class="box">
 		
-			<form method="post" action="#">
-				<div class="field half first">
-					<input type="text" name="name" placeholder="Name" />
-				</div>
-				<div class="field half">
-					<input type="email" name="email" placeholder="Email" />
-				</div>
-				
-				<table>
+			<form method="post" action="">
+			<table>
+				<tr>
+					<td><input id="nickname" type="text" name="name" placeholder="NickName" /></td>
+					<td><input id="battletag" type="text" name="name" placeholder="BattleTag" /></td>
+					<td><input id="battlenetemail" type="email" name="email" placeholder="battleNetEmail" /></td>
+				</tr>
+			</table>
+			<table>
 					<tr>
-						<td><img id="contact1" class="contacthero" alt="" src="./img/hero1.jpg" onclick="" /></td>
-						<td><img id="contact2" class="contacthero" alt="" src="./img/hero2.jpg" onclick="" /></td>
-						<td><img id="contact3" class="contacthero" alt="" src="./img/hero3.jpg" onclick="" /></td>
-						<td><img id="contact4" class="contacthero" alt="" src="./img/hero4.jpg" onclick="" /></td>
-						<td><img id="contact5" class="contacthero" alt="" src="./img/hero5.jpg" onclick="" /></td>
-						<td><img id="contact6" class="contacthero" alt="" src="./img/hero6.jpg" onclick="" /></td>
-						<td><img id="contact7" class="contacthero" alt="" src="./img/hero7.jpg" onclick="" /></td>
-						<td><img id="contact8" class="contacthero" alt="" src="./img/hero8.jpg" onclick="" /></td>
-						<td><img id="contact9" class="contacthero" alt="" src="./img/hero9.jpg" onclick="" /></td>
+						<td><img id="contact1" class="contacthero" alt="" src="./img/hero1.jpg" onclick="clickradio(this)" />
+						<input id="racontact1" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact2" class="contacthero" alt="" src="./img/hero2.jpg" onclick="clickradio(this)" />
+						<input id="racontact2" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact3" class="contacthero" alt="" src="./img/hero3.jpg" onclick="clickradio(this)" />
+						<input id="racontact3" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact4" class="contacthero" alt="" src="./img/hero4.jpg" onclick="clickradio(this)" />
+						<input id="racontact4" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact5" class="contacthero" alt="" src="./img/hero5.jpg" onclick="clickradio(this)" />
+						<input id="racontact5" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact6" class="contacthero" alt="" src="./img/hero6.jpg" onclick="clickradio(this)" />
+						<input id="racontact6" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact7" class="contacthero" alt="" src="./img/hero7.jpg" onclick="clickradio(this)" />
+						<input id="racontact7" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact8" class="contacthero" alt="" src="./img/hero8.jpg" onclick="clickradio(this)" />
+						<input id="racontact8" class="radiobtn" type="radio" name="selecthero"></td>
+						
+						<td><img id="contact9" class="contacthero" alt="" src="./img/hero9.jpg" onclick="clickradio(this)" />
+						<input id="racontact9" class="radiobtn" type="radio" name="selecthero"></td>
 					</tr>		
 				</table>
 				
@@ -198,5 +215,9 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script type="text/javascript">
+				function clickradio(id){
+					document.getElementById("ra"+id.id).checked = true;
+				}
+			</script>
 </html>
