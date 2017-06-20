@@ -134,6 +134,7 @@
 			dolore condimentum.</p>
 		</header>
 		<div class="box">
+		
 			<form method="post" action="#">
 				<div class="field half first">
 					<input type="text" name="name" placeholder="Name" />
@@ -141,6 +142,21 @@
 				<div class="field half">
 					<input type="email" name="email" placeholder="Email" />
 				</div>
+				
+				<table>
+					<tr>
+						<td><img id="contact1" class="contacthero" alt="" src="./img/hero1.jpg" onclick="" /></td>
+						<td><img id="contact2" class="contacthero" alt="" src="./img/hero2.jpg" onclick="" /></td>
+						<td><img id="contact3" class="contacthero" alt="" src="./img/hero3.jpg" onclick="" /></td>
+						<td><img id="contact4" class="contacthero" alt="" src="./img/hero4.jpg" onclick="" /></td>
+						<td><img id="contact5" class="contacthero" alt="" src="./img/hero5.jpg" onclick="" /></td>
+						<td><img id="contact6" class="contacthero" alt="" src="./img/hero6.jpg" onclick="" /></td>
+						<td><img id="contact7" class="contacthero" alt="" src="./img/hero7.jpg" onclick="" /></td>
+						<td><img id="contact8" class="contacthero" alt="" src="./img/hero8.jpg" onclick="" /></td>
+						<td><img id="contact9" class="contacthero" alt="" src="./img/hero9.jpg" onclick="" /></td>
+					</tr>		
+				</table>
+				
 				<div class="field">
 					<textarea name="message" placeholder="Message" rows="6"></textarea>
 				</div>
@@ -148,15 +164,19 @@
 					<li><input type="submit" value="Send Message" /></li>
 				</ul>
 			</form>
+		
 		</div>
 	</div>
 	</section>
 	<!-- Footer -->
 	<footer id="footer"> <!-- Icons -->
 	<ul class="actions">
-		<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-		<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-		<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="https://twitter.com/?lang=ko" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+		<li><a href="https://www.instagram.com/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+		<li><a href="https://github.com/JeonSeongBae/" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		<li><a href="https://www.naver.com" class="icon fa-envelope-o"><span
+				class="label">Email</span></a></li>
+		<li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 		<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 		<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 		<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
