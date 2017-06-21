@@ -13,13 +13,13 @@
 		<!-- 		1P에 들어와있는 카드 -->
 		<table class="Hand" id="yourHand">
 			<tr>
-				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td class="newyour" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<div class="yourcard1">
 						<img class="yourplayCard" id="yourcard1" src="./img/cardlist/card1.JPG" draggable="true" ondragstart="drag(event)">
 						<div>1</div><div>3</div><div>X</div>
 					</div>
 				</td>
-				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td class="newyour" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<div class="yourcard2">
 						<img class="yourplayCard" id="yourcard2" src="./img/cardlist/card2.JPG" draggable="true" ondragstart="drag(event)">
 						<div>6</div><div>7</div><div>X</div>
@@ -31,13 +31,13 @@
 						<div>0</div><div>10</div>
 					</div>
 				</td>
-				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td class="newyour" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<div class="yourcard3">
 						<img class="yourplayCard" id="yourcard3" src="./img/cardlist/card3.JPG" draggable="true" ondragstart="drag(event)">
 						<div>2</div><div>3</div><div>X</div>
 					</div>
 				</td>
-				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td class="newyour" ondrop="drop(event)" ondragover="allowDrop(event)">
 					<div class="yourcard4">
 						<img class="yourplayCard" id="yourcard4" src="./img/cardlist/card4.JPG" draggable="true" ondragstart="drag(event)">
 						<div>3</div><div>2</div><div>X</div>
@@ -70,13 +70,13 @@
 			<!-- 		2P 손에있는 카드 -->
 			<table class="Hand" id="myHand">
 				<tr>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)">
+					<td class="newmy" ondrop="drop(event)" ondragover="allowDrop(event)">
 						<div class="mycard1">
 							<img class="myplayCard" id="mycard1" src="./img/cardlist/card5.JPG" draggable="true" ondragstart="drag(event)">
 							<div>4</div><div>5</div><div>O</div>
 						</div>
 					</td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)">
+					<td class="newmy" ondrop="drop(event)" ondragover="allowDrop(event)">
 						<div class="mycard2">
 							<img class="myplayCard" id="mycard2" src="./img/cardlist/card6.JPG" draggable="true" ondragstart="drag(event)">
 							<div>2</div><div>7</div><div>O</div>
@@ -88,13 +88,13 @@
 							<div>0</div><div>10</div>
 						</div>
 					</td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)">
+					<td class="newmy" ondrop="drop(event)" ondragover="allowDrop(event)">
 						<div class="mycard3">
 							<img class="myplayCard" id="mycard3" src="./img/cardlist/card7.JPG" draggable="true" ondragstart="drag(event)">
 							<div>5</div><div>1</div><div>O</div>
 						</div>
 					</td>
-					<td ondrop="drop(event)" ondragover="allowDrop(event)">
+					<td class="newmy" ondrop="drop(event)" ondragover="allowDrop(event)">
 						<div class="mycard4">
 							<img class="myplayCard" id="mycard4" src="./img/cardlist/card8.JPG" draggable="true" ondragstart="drag(event)">
 							<div>2</div><div>1</div><div>O</div>
@@ -106,6 +106,9 @@
 </body>
 <script type="text/javascript">
 	var turn = 1;
+	var yourcnt = 5;
+	var mycnt = 5;
+	
 	function startgame(){
 		var myturn = document.getElementsByClassName("myplayCard");
 		var yourturn = document.getElementsByClassName("yourplayCard");
@@ -114,33 +117,184 @@
 			myturn[i].nextElementSibling.nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
 			myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
 		}
-		for (var i = 0; i < myturn.length; i++) {
+		for (var i = 0; i < yourturn.length; i++) {
 			yourturn[i].nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
 			yourturn[i].nextElementSibling.nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
 			yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
 		}
 	}
+	// 다음 턴으로 넘기기
 	function next(){
 		if (turn == 0){
-			var myturn = document.getElementsByClassName("myplayCard");
-			var yourturn = document.getElementsByClassName("yourplayCard");
-			for (var i = 0; i < myturn.length; i++) {
-				myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
-			}
-			for (var i = 0; i < myturn.length; i++) {
-				yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
-			}
+			myturn();
 			turn = 1;
 		}else{
-			var myturn = document.getElementsByClassName("myplayCard");
-			var yourturn = document.getElementsByClassName("yourplayCard");
-			for (var i = 0; i < myturn.length; i++) {
-				myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
-			}
-			for (var i = 0; i < myturn.length; i++) {
-				yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
-			}
+			yourturn();
 			turn = 0;
+		}
+	}
+	// 나의 턴 시작
+	function myturn(){
+		var myturn = document.getElementsByClassName("myplayCard");
+		var yourturn = document.getElementsByClassName("yourplayCard");
+		for (var i = 0; i < myturn.length; i++) {
+			myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
+		}
+		for (var i = 0; i < yourturn.length; i++) {
+			yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+		}
+	}
+	// 상대 턴 시작
+	function yourturn(){
+		var myturn = document.getElementsByClassName("myplayCard");
+		var yourturn = document.getElementsByClassName("yourplayCard");
+		for (var i = 0; i < myturn.length; i++) {
+			myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+		}
+		for (var i = 0; i < yourturn.length; i++) {
+			yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
+		}
+	}
+	// 나의 턴 종료
+	function myturnend(){
+		var myturn = document.getElementsByClassName("myplayCard");
+		for (var i = 0; i < myturn.length; i++) {
+			myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+		}
+	}
+	// 상대 턴 종료
+	function yourturnend(){
+		var yourturn = document.getElementsByClassName("yourplayCard");
+		for (var i = 0; i < yourturn.length; i++) {
+			yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+		}
+	}
+	function newyour(){
+		var newyour = document.getElementsByClassName("newyour");
+				
+		var APdiv = document.createElement("div");
+		APdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var HPdiv = document.createElement("div");
+		HPdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var turndiv = document.createElement("div");
+		turndiv.innerHTML = "X";
+		
+		var image = document.createElement("img");
+		image.src = "./img/cardlist/card1.JPG";
+		image.className = "yourplayCard";
+		image.id = "yourcard" + yourcnt;
+		
+		var maindiv = document.createElement("div");
+		maindiv.className = "yourcard" + yourcnt++;
+		maindiv.appendChild(image);
+		maindiv.appendChild(APdiv);
+		maindiv.appendChild(HPdiv);
+		maindiv.appendChild(turndiv);
+		
+		for (var i = 0; i < newyour.length; i++) {
+			if(newyour[i].firstElementChild == null){
+				newyour[i].appendChild(maindiv);
+				break;
+			}
+		}
+	}
+	function newmy(){
+		var newmy = document.getElementsByClassName("newmy");
+		
+		var APdiv = document.createElement("div");
+		APdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var HPdiv = document.createElement("div");
+		HPdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var turndiv = document.createElement("div");
+		turndiv.innerHTML = "X";
+		
+		var image = document.createElement("img");
+		image.src = "./img/cardlist/card1.JPG";
+		image.className = "myplayCard";
+		image.id = "mycard" + mycnt;
+		image.draggable = "true";
+		image.ondragstart="drag(event)";
+		
+		var maindiv = document.createElement("div");
+		maindiv.className = "mycard" + mycnt++;
+		maindiv.appendChild(image);
+		maindiv.appendChild(APdiv);
+		maindiv.appendChild(HPdiv);
+		maindiv.appendChild(turndiv);
+		
+		for (var i = 0; i < newmy.length; i++) {
+			if(newmy[i].firstElementChild == null){
+				newmy[i].appendChild(maindiv);
+				break;
+			}
+		}
+	}
+	function newyour(){
+		var newyour = document.getElementsByClassName("newyour");
+				
+		var APdiv = document.createElement("div");
+		APdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var HPdiv = document.createElement("div");
+		HPdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var turndiv = document.createElement("div");
+		turndiv.innerHTML = "X";
+		
+		var image = document.createElement("img");
+		image.src = "./img/cardlist/card1.JPG";
+		image.className = "yourplayCard";
+		image.id = "yourcard" + yourcnt;
+		
+		var maindiv = document.createElement("div");
+		maindiv.className = "yourcard" + yourcnt++;
+		maindiv.appendChild(image);
+		maindiv.appendChild(APdiv);
+		maindiv.appendChild(HPdiv);
+		maindiv.appendChild(turndiv);
+		
+		for (var i = 0; i < newyour.length; i++) {
+			if(newyour[i].firstElementChild == null){
+				newyour[i].appendChild(maindiv);
+				break;
+			}
+		}
+	}
+	function newmy(){
+		var newmy = document.getElementsByClassName("newmy");
+		
+		var APdiv = document.createElement("div");
+		APdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var HPdiv = document.createElement("div");
+		HPdiv.innerHTML = Math.floor((Math.random() * 10) + 1);
+		
+		var turndiv = document.createElement("div");
+		turndiv.innerHTML = "X";
+		
+		var image = document.createElement("img");
+		image.src = "./img/cardlist/card1.JPG";
+		image.className = "myplayCard";
+		image.id = "mycard" + mycnt;
+		image.draggable = "true";
+		image.ondragstart="drag(event)";
+		
+		var maindiv = document.createElement("div");
+		maindiv.className = "mycard" + mycnt++;
+		maindiv.appendChild(image);
+		maindiv.appendChild(APdiv);
+		maindiv.appendChild(HPdiv);
+		maindiv.appendChild(turndiv);
+		
+		for (var i = 0; i < newmy.length; i++) {
+			if(newmy[i].firstElementChild == null){
+				newmy[i].appendChild(maindiv);
+				break;
+			}
 		}
 	}
 	/* TermProject_2 */
@@ -153,7 +307,7 @@
 	function drag(ev) {
 		ev.dataTransfer.setData("text", ev.target.id);
 	}
-	// 카드를 Drop할 때 해당 table의 chile로 만들어줌
+	// 상대필드에 드랍할 경우
 	function yourdrop(ev) {
 		ev.preventDefault();
 		var data = ev.dataTransfer.getData("text");
@@ -177,8 +331,8 @@
 							temp.children[2].innerHTML = HP2;
 						}
 					ev.target.nextElementSibling.nextElementSibling.innerHTML = Number(THP) - Number(AP); // 타겟의 HP
-					if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){
-						if (ev.target.id != "myhero" && ev.target.id != "yourhero"){
+					if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){ // 타겟의 hp가 0이하일 경우
+						if (ev.target.id != "myhero" && ev.target.id != "yourhero"){ // 타겟이 hero가 아닐 경우
 							document.getElementsByClassName(ev.target.id)[0].remove();
 						}
 						else if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){
@@ -188,10 +342,11 @@
 				}
 			} else {
 				ev.target.appendChild(document.getElementsByClassName(data)[0]);
+				yourturnend();
 			}
 		}
 	}
-	// 카드를 Drop할 때 해당 table의 chile로 만들어줌
+	// 나의 필드에 드랍할 경우
 	function mydrop(ev) {
 		ev.preventDefault();
 		var data = ev.dataTransfer.getData("text");
@@ -216,8 +371,8 @@
 							temp.children[2].innerHTML = HP2;
 						}
 					ev.target.nextElementSibling.nextElementSibling.innerHTML = Number(THP) - Number(AP); // 타겟의 HP
-					if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){
-						if (ev.target.id != "myhero" && ev.target.id != "yourhero"){
+					if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){ // 타겟의 체력이 0이하일 경우
+						if (ev.target.id != "myhero" && ev.target.id != "yourhero"){ // 타겟이 hero가 아닐경우
 							document.getElementsByClassName(ev.target.id)[0].remove();
 						}
 						else if (ev.target.nextElementSibling.nextElementSibling.innerHTML <= 0){
@@ -227,6 +382,7 @@
 				}
 			} else {
 				ev.target.appendChild(document.getElementsByClassName(data)[0]);
+				myturnend();
 			}
 		}
 	}

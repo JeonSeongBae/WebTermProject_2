@@ -214,7 +214,6 @@
 				    var password = prompt("이메일 패스워드를 입력해주세요.");
 					var checkemail = document.getElementById("battlenetemailid").value;
 					checkemail += document.getElementById("battlenetemail").value;
-					alert(checkemail);
 					$.ajax({
 						type : 'post',
 						url : 'http://localhost:8080/TP2_201302476/home/email.jsp',
