@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="./tutorialcss.css">
 <title>T U T O R I A L</title>
 </head>
-<body>
+<body onload="startgame()">
 	<main>
 		<h1 align="center">T U T O R I A L</h1>
 		<!-- 		1P에 들어와있는 카드 -->
@@ -106,12 +106,28 @@
 </body>
 <script type="text/javascript">
 	var turn = 1;
+	function startgame(){
+		var myturn = document.getElementsByClassName("myplayCard");
+		var yourturn = document.getElementsByClassName("yourplayCard");
+		for (var i = 0; i < myturn.length; i++) {
+			myturn[i].nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
+			myturn[i].nextElementSibling.nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
+			myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
+		}
+		for (var i = 0; i < myturn.length; i++) {
+			yourturn[i].nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
+			yourturn[i].nextElementSibling.nextElementSibling.innerHTML = Math.floor((Math.random() * 10) + 1);
+			yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+		}
+	}
 	function next(){
 		if (turn == 0){
 			var myturn = document.getElementsByClassName("myplayCard");
 			var yourturn = document.getElementsByClassName("yourplayCard");
 			for (var i = 0; i < myturn.length; i++) {
 				myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
+			}
+			for (var i = 0; i < myturn.length; i++) {
 				yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
 			}
 			turn = 1;
@@ -120,6 +136,8 @@
 			var yourturn = document.getElementsByClassName("yourplayCard");
 			for (var i = 0; i < myturn.length; i++) {
 				myturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "X";
+			}
+			for (var i = 0; i < myturn.length; i++) {
 				yourturn[i].nextElementSibling.nextElementSibling.nextElementSibling.innerHTML = "O";
 			}
 			turn = 0;
@@ -147,7 +165,7 @@
 		}else if (temp.children[3].innerHTML == "O"){
 			temp.children[3].innerHTML = "X";
 			if (data.split("c")[0] == "my") {
-				if (ev.target.className == "yourplayCard"){
+				if (ev.target.className == "yourplayCard" || ev.target.className == "playCard"){
 					var AP = temp.children[1].innerHTML;// 공격력
 					var HP = temp.children[2].innerHTML;// 생명력
 					var TAP = ev.target.nextElementSibling.innerHTML; //타겟 공격력
@@ -186,7 +204,7 @@
 			temp.children[3].innerHTML = "X";
 			var data = ev.dataTransfer.getData("text");
 			if (data.split("c")[0] == "your") {
-				if (ev.target.className == "myplayCard"){
+				if (ev.target.className == "myplayCard" || ev.target.className == "playCard"){
 					var AP = temp.children[1].innerHTML;// 공격력
 					var HP = temp.children[2].innerHTML;// 생명력
 					var TAP = ev.target.nextElementSibling.innerHTML; //타겟 공격력
