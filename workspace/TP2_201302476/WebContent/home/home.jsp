@@ -19,11 +19,11 @@
 	<nav>
 	<ul>
 		<li><a href="#intro">Intro</a></li>
-		<li><a href="#one">one</a></li>
-		<li><a href="#two">two</a></li>
-		<li><a href="#three">three</a></li>
-		<li><a href="#work">work</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li><a href="#one">hero_1</a></li>
+		<li><a href="#two">hero_2</a></li>
+		<li><a href="#three">hero_3</a></li>
+		<li><a href="#work">?</a></li>
+		<li><a href="#contact">deputy</a></li>
 	</ul>
 	</nav> </header>
 
@@ -35,7 +35,8 @@
 			</header>
 			<p>빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
 				<h4>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.</h4><br>
-				<input type="button" value="게임 플레이"><br><br> PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능<br></p>
+				<input type="button" value="게임 플레이" onclick="location.href='http://localhost:8080/TP2_201302476/home/tutorial.jsp'" ><br><br>
+				PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능<br></p>
 			<footer><a href="#one" class="button style2 down">More</a> </footer>
 		</div>
 	</section>
@@ -160,12 +161,12 @@
 				</tr>
 				<tr>
 					<td><input id="battlenetemailid" type="email" value="" placeholder="EmailID" /></td>
-					<td><input id="battlenetemail" type="text" value="@gmail.com" placeholder="@email.com" /></td>
-					<td><select>
-						<option value=" ">---직접입력---</option>
-						<option value="@gmail.com" onclick="selectemail(this)">@gmail.com</option>
-						<option value="@naver.com" onclick="selectemail(this)">@naver.com</option>
-						<option value="@daum.net" onclick="selectemail(this)">@daum.net</option>
+					<td><input id="battlenetemail" type="text" value="@gmail.com" placeholder="---직접입력---" /></td>
+					<td><select id="select">
+						<option class="option" value="">---직접입력---</option>
+						<option class="option" value="@gmail.com">@gmail.com</option>
+						<option class="option" value="@naver.com">@naver.com</option>
+						<option class="option" value="@daum.net">@daum.net</option>
 					</select></td>
 				</tr>
 			</table>
@@ -239,14 +240,20 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
-				function selectemail(id){
-					var changeemail = document.getElementById("battlenetemail").value;
-					changeemail = "";
-					document.getElementById("battlenetemail").value = id.value;
-				}
+			
+				$('#select').blur(function() {
+					document.getElementById("battlenetemail").value = document.getElementById("select").value;
+					if (document.getElementById("select").value == ""){
+						document.getElementById("battlenetemail").disabled = false;
+					}else{
+						document.getElementById("battlenetemail").disabled = true;
+					}
+				});
+				
 				function clickradio(id){
 					document.getElementById("ra"+id.id).checked = true;
 				}
+				
 				function send_email() {
 				    var radio = document.getElementsByClassName("radiobtn");
 				    var radioindex;
