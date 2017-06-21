@@ -25,8 +25,7 @@
 		String Hero = request.getParameter("Hero").toString();
 		String Msg = request.getParameter("Msg").toString();
 		String ID = request.getParameter("Id").toString();
-		System.out.println(Hero);
-
+		System.out.println(Email+"/");
 		String sbj = "인증을 진행해주세요.";
 		String src = request.getParameter("Password").toString();; // 보내는사람 email주소
 		if (Hero.equals("0")){

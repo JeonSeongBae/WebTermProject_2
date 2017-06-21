@@ -1,8 +1,11 @@
 @CHARSET "UTF-8";
 /*TermProject_2*/
 /* 전체적인 튜토리얼 필드*/
-#Tutorial {
+body{
 	text-align: center;
+}
+#Tutorial {
+/* 	text-align: center; */
 }
 /* 각각의 튜토리얼 테이블 */
 .tutorialTable {
@@ -31,34 +34,10 @@
 #terminateTurn {
 	width: 100px;
 	height: 50px;
+	cursor: pointer;
 }
 /* 각각의 카드 */
-.playCard {
+.playCard, .yourplayCard, .myplayCard {
 	width: 128px;
 	height: 140px;
-}
-
-/* 덱 리스트 */
-.decklist {
-	
-}
-/* 직업캐릭터 */
-.character {
-	
-}
-/* 카드파괴 */
-.destroy {
-	
-}
-/* 공격력버프 */
-.adbuff {
-	
-}
-/* 방어력버프 */
-.sheildbuff {
-	
-}
-/*특수능력*/
-.skill {
-	
 }

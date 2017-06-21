@@ -19,11 +19,10 @@
 	<nav>
 	<ul>
 		<li><a href="#intro">Intro</a></li>
-		<li><a href="#one">one</a></li>
-		<li><a href="#two">two</a></li>
-		<li><a href="#three">three</a></li>
-		<li><a href="#work">work</a></li>
-		<li><a href="#contact">Contact</a></li>
+		<li><a href="#one">hero_1</a></li>
+		<li><a href="#two">hero_2</a></li>
+		<li><a href="#three">hero_3</a></li>
+		<li><a href="#contact">deputy</a></li>
 	</ul>
 	</nav> </header>
 
@@ -35,7 +34,8 @@
 			</header>
 			<p>빠른 속도로 펼쳐지는, 모두를 위한 전략 카드 게임<br>
 				<h4>놀랄 만큼 쉽고<br>믿기힘들 만큼 재미있습니다.</h4><br>
-				<input type="button" value="게임 플레이"><br><br> PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능<br></p>
+				<input type="button" value="게임 플레이" onclick="location.href='http://localhost:8080/TP2_201302476/home/tutorial.jsp'" ><br><br>
+				PC, Mac, iPad 및 Android 태블릿, 스마트폰에서 이용 가능<br></p>
 			<footer><a href="#one" class="button style2 down">More</a> </footer>
 		</div>
 	</section>
@@ -91,56 +91,6 @@
 		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
 
-	<!-- Work -->
-	<section id="work" class="main style3 primary">
-		<div class="content">
-			<header>
-			<h2>My Work</h2>
-			<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas
-				dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci
-				rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in.
-				Curabitur egestas consectetur magna vitae.</p>
-			</header>
-			<!-- Gallery  -->
-			<div class="gallery">
-				<article class="from-left">
-					<a href="images/fulls/01.jpg" class="image fit">
-						<img src="images/thumbs/01.jpg"	title="The Anonymous Red" alt="" />
-					</a>
-				</article>
-				
-				<article class="from-right">
-					<a href="images/fulls/02.jpg" class="image fit">
-						<img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" />
-					</a>
-				</article>
-				
-				<article class="from-left">
-					<a href="images/fulls/03.jpg" class="image fit">
-						<img src="images/thumbs/03.jpg"	title="Air Lounge" alt="" />
-					</a>
-				</article>
-				
-				<article class="from-right">
-					<a href="images/fulls/04.jpg" class="image fit">
-						<img src="images/thumbs/04.jpg"	title="Carry on" alt="" />
-					</a>
-				</article>
-				
-				<article class="from-left">
-					 <a href="images/fulls/05.jpg" class="image fit">
-						<img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" />
-					</a>
-				</article>
-				
-				<article class="from-right">
-					<a href="images/fulls/06.jpg" class="image fit">
-						<img src="images/thumbs/06.jpg"	title="Bent IX" alt="" />
-					</a> 
-				</article>
-			</div>
-		</div>
-	</section>
 	<!-- Contact -->
 	<section id="contact" class="main style3 secondary">
 	<div class="content">
@@ -159,10 +109,13 @@
 					<td><input id="battletag" type="text" placeholder="BattleTag" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input id="battlenetemail" type="email" placeholder="battleNetEmail" /></td>
-					<td><select>
-						<option value="">---직접입력---</option>
-						<option value="@gmail.com">@gamil.com</option>
+					<td><input id="battlenetemailid" type="email" value="" placeholder="EmailID" /></td>
+					<td><input id="battlenetemail" type="text" value="@gmail.com" placeholder="---직접입력---" /></td>
+					<td><select id="select">
+						<option class="option" value="">---직접입력---</option>
+						<option class="option" value="@gmail.com">@gmail.com</option>
+						<option class="option" value="@naver.com">@naver.com</option>
+						<option class="option" value="@daum.net">@daum.net</option>
 					</select></td>
 				</tr>
 			</table>
@@ -236,9 +189,20 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
+			
+				$('#select').blur(function() {
+					document.getElementById("battlenetemail").value = document.getElementById("select").value;
+					if (document.getElementById("select").value == ""){
+						document.getElementById("battlenetemail").disabled = false;
+					}else{
+						document.getElementById("battlenetemail").disabled = true;
+					}
+				});
+				
 				function clickradio(id){
 					document.getElementById("ra"+id.id).checked = true;
 				}
+				
 				function send_email() {
 				    var radio = document.getElementsByClassName("radiobtn");
 				    var radioindex;
@@ -248,13 +212,15 @@
 				      }
 				    }
 				    var password = prompt("이메일 패스워드를 입력해주세요.");
+					var checkemail = document.getElementById("battlenetemailid").value;
+					checkemail += document.getElementById("battlenetemail").value;
 					$.ajax({
 						type : 'post',
 						url : 'http://localhost:8080/TP2_201302476/home/email.jsp',
 						data : {
 							Nickname : document.getElementById("nickname").value,
 							Battletag : document.getElementById("battletag").value,
-							Email : document.getElementById("battlenetemail").value,
+							Email : checkemail,
 							Msg : document.getElementById("Msg").value,
 							Id : document.getElementById("id").value,
 							Hero : radioindex,
