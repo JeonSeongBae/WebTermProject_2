@@ -10,11 +10,6 @@
 <body>
 	<main>
 		<h1>T U T O R I A L</h1>
-<!-- 		1P 케릭터 -->
-		<div class="yourhero">
-			<img class="playCard" id="yourhero" src="./img/hero1.jpg" ondrop="yourdrop(event)" ondragover="allowDrop(event)">
-			<div>0</div><div>10</div>
-		</div>
 		<!-- 		1P에 들어와있는 카드 -->
 		<table class="Hand" id="yourHand">
 			<tr>
@@ -28,6 +23,12 @@
 					<div class="yourcard2">
 						<img class="playCard" id="yourcard2" src="./img/cardlist/card2.JPG" draggable="true" ondragstart="drag(event)">
 						<div>6</div><div>7</div>
+					</div>
+				</td>
+				<td>
+					<div class="yourhero">
+						<img class="playCard" id="yourhero" src="./img/hero1.jpg" ondrop="yourdrop(event)" ondragover="allowDrop(event)">
+						<div>0</div><div>10</div>
 					</div>
 				</td>
 				<td ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -81,6 +82,12 @@
 							<div>2</div><div>7</div>
 						</div>
 					</td>
+					<td>
+						<div class="yourhero">
+							<img class="playCard" id="yourhero" src="./img/hero1.jpg" ondrop="yourdrop(event)" ondragover="allowDrop(event)">
+							<div>0</div><div>10</div>
+						</div>
+					</td>
 					<td ondrop="drop(event)" ondragover="allowDrop(event)">
 						<div class="mycard3">
 							<img class="playCard" id="mycard3" src="./img/cardlist/card7.JPG" draggable="true" ondragstart="drag(event)">
@@ -95,11 +102,6 @@
 					</td>
 				</tr>
 			</table>
-				<!-- 		1P 케릭터 -->
-		<div class="myhero">
-			<img class="playCard" id="myhero" src="./img/hero1.jpg" ondrop="mydrop(event)" ondragover="allowDrop(event)">
-			<div>0</div><div>10</div>
-		</div>
 	</main>
 </body>
 <script type="text/javascript">
