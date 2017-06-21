@@ -159,10 +159,13 @@
 					<td><input id="battletag" type="text" placeholder="BattleTag" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input id="battlenetemail" type="email" placeholder="battleNetEmail" /></td>
+					<td><input id="battlenetemailid" type="email" value="" placeholder="EmailID" /></td>
+					<td><input id="battlenetemail" type="text" value="@gmail.com" placeholder="@email.com" /></td>
 					<td><select>
-						<option value="">---직접입력---</option>
-						<option value="@gmail.com">@gamil.com</option>
+						<option value=" ">---직접입력---</option>
+						<option value="@gmail.com" onclick="selectemail(this)">@gmail.com</option>
+						<option value="@naver.com" onclick="selectemail(this)">@naver.com</option>
+						<option value="@daum.net" onclick="selectemail(this)">@daum.net</option>
 					</select></td>
 				</tr>
 			</table>
@@ -236,6 +239,11 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
+				function selectemail(id){
+					var changeemail = document.getElementById("battlenetemail").value;
+					changeemail = "";
+					document.getElementById("battlenetemail").value = id.value;
+				}
 				function clickradio(id){
 					document.getElementById("ra"+id.id).checked = true;
 				}
@@ -248,13 +256,16 @@
 				      }
 				    }
 				    var password = prompt("이메일 패스워드를 입력해주세요.");
+					var checkemail = document.getElementById("battlenetemailid").value;
+					checkemail += document.getElementById("battlenetemail").value;
+					alert(checkemail);
 					$.ajax({
 						type : 'post',
 						url : 'http://localhost:8080/TP2_201302476/home/email.jsp',
 						data : {
 							Nickname : document.getElementById("nickname").value,
 							Battletag : document.getElementById("battletag").value,
-							Email : document.getElementById("battlenetemail").value,
+							Email : checkemail,
 							Msg : document.getElementById("Msg").value,
 							Id : document.getElementById("id").value,
 							Hero : radioindex,
