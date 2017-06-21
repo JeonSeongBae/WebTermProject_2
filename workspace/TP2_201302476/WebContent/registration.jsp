@@ -180,9 +180,7 @@
 				location.href = 'http://localhost:8080/TP2_201302476/login.jsp';
 				}
 		})
-
 	}
-
 
 		(function() {
 
